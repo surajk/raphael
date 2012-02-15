@@ -151,7 +151,6 @@
         return current_event;
     };
     
-    
     eve.off = eve.unbind = function (name, f) {
         var names = name.split(separator),
             e,
@@ -5499,3 +5498,7 @@ window.Raphael.vml && function (R) {
         })(method);
     }
 }(window.Raphael);
+
+if ( typeof define === "function" && define.amd ) {
+    define( function () { return window.Raphael; } );
+}

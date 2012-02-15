@@ -13,20 +13,21 @@ var setup = {
             svg: "raphael.svg.js",
             vml: "raphael.vml.js",
             eve: "eve/eve.js",
-            copy: "copy.js"
+            copy: "copy.js",
+            amd: "amd.js"                 
         },
         output: {
             "raphael-min.js": function () {
-                return this.copy + "\n" + minify(this.eve + this.core + this.svg + this.vml);
+                return this.copy + "\n" + minify(this.eve + this.core + this.svg + this.vml + "\n\n" + this.amd);
             },
             "raphael.js": function () {
-                return this.copy + "\n" + this.eve + "\n\n" + this.core + "\n\n" + this.svg + "\n\n" + this.vml;
+                return this.copy + "\n" + this.eve + "\n\n" + this.core + "\n\n" + this.svg + "\n\n" + this.vml + "\n\n" + this.amd;
             },
             "raphael.pro-min.js": function () {
                 return this.copy + "\n" + minify(this.eve + this.core + this.svg);
             },
             "raphael.pro.js": function () {
-                return this.copy + "\n" + this.eve + "\n\n" + this.core + "\n\n" + this.svg ;
+                return this.copy + "\n" + this.eve + "\n\n" + this.core + "\n\n" + this.svg;
             },
         }
     },
