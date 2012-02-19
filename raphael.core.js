@@ -5,7 +5,7 @@
 // │ Copyright (c) 2008-2011 Sencha Labs (http://sencha.com)             │ \\
 // │ Licensed under the MIT (http://raphaeljs.com/license.html) license. │ \\
 // └─────────────────────────────────────────────────────────────────────┘ \\
-(function () {
+define(['eve'], function (eve) {     
     /*\
      * Raphael
      [ method ]
@@ -4708,5 +4708,7 @@
     
     eve.on("DOMload", function () {
         loaded = true;
-    });
-})();
+    });       
+    
+    return R;
+});
